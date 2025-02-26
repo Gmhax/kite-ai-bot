@@ -2,7 +2,7 @@
 
 A Node.js bot for interacting with the KiteAI testnet platform, featuring a clean terminal user interface and automated interactions with AI agents.
 
-## Features
+## BOT FEATURE
 
 - Interactive terminal dashboard using blessed/blessed-contrib
 - Multiple wallet support
@@ -11,13 +11,13 @@ A Node.js bot for interacting with the KiteAI testnet platform, featuring a clea
 - Rate limiting and error handling
 - Groq AI integration for dynamic question generation
 
-## Prerequisites
+## PREREQUISITE
 
 - Node.js v16 or higher
 - A KiteAI testnet account [Register](https://testnet.gokite.ai/)
 - A Groq API key Get it from https://console.groq.com
 
-## Installation
+## INSTALLATION
 
 1. Clone the repository:
 
@@ -41,7 +41,7 @@ nano accounts/accounts.js
 nano config/config.js
 ```
 
-## Usage
+## USAGE
 
 Start the bot:
 
@@ -49,7 +49,7 @@ Start the bot:
 npm run start
 ```
 
-### Controls
+### CONTROLS
 
 - Press `Ctrl+C` or `q` to exit
 - The dashboard will show:
@@ -58,7 +58,7 @@ npm run start
 - Statistics (total requests, success rate)
 - Progress indicator
 
-## Dashboard Components
+## DASHBOARD COMPONENTS
 
 - **Banner**: Shows project information and links
 - **Agent Interactions**: Real-time log of questions and answers
@@ -66,7 +66,7 @@ npm run start
 - **Statistics**: Displays request counts and success rate
 - **Progress**: Visual indicator of cycle progress (resets every 10 cycles)
 
-## Error Handling
+## ERROR HANDLING
 
 The bot includes robust error handling for:
 
@@ -75,7 +75,7 @@ The bot includes robust error handling for:
 - Invalid responses
 - API errors
 
-## Contributing
+## CONTRIBUTING
 
 1. Fork the repository
 2. Create your feature branch
@@ -83,6 +83,6 @@ The bot includes robust error handling for:
 4. Push to the branch
 5. Open a Pull Request
 
-## License
+## LICENSE
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for more details.
