@@ -100,9 +100,10 @@ async function main() {
       process.exit(1);
     }
 
-    dashboard.log(`Loaded ${wallets.length} wallet addresses from accounts.js`);
-    dashboard.updateStatus("Initializing...");
+    dashboard.log(`Loaded ${wallets.length} wallets:`);  
+    wallets.forEach((wallet) => dashboard.log(`- ${wallet}`));
 
+    dashboard.updateStatus("Initializing...");
     await startContinuousProcess(wallets);
   } catch (error) {
     dashboard.log(`An error occurred: ${formatError(error)}`);
