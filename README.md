@@ -32,14 +32,14 @@ npm install && npm run setup
 ```
 
 3. Configure your accounts:
-   ```bash
-   nano accounts/accounts.js
-   ```
+```bash
+nano accounts/accounts.js
+```
 
 4. Update your Groq API key in `config`
-   ```bash
-   nano config/config.js
-   ```
+```bash
+nano config/config.js
+```
 
 ## Usage
 
