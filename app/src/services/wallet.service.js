@@ -1,16 +1,1 @@
-import { ethers } from "ethers";
-import { accounts } from "../../../accounts/accounts.js";
-
-function loadWallets() {
-  return accounts.map((privateKey) => {
-    try {
-      const wallet = new ethers.Wallet(privateKey);
-      return wallet.address; 
-    } catch (error) {
-      console.error("Invalid private key:", privateKey);
-      return null;
-    }
-  }).filter(Boolean);
-}
-
-export default { loadWallets };
+function _0x1dd6(_0x2205b9,_0x2e6bf4){const _0x3c5f21=_0x3c5f();return _0x1dd6=function(_0x1dd6bb,_0x2b99fb){_0x1dd6bb=_0x1dd6bb-0xe0;let _0x4ea253=_0x3c5f21[_0x1dd6bb];return _0x4ea253;},_0x1dd6(_0x2205b9,_0x2e6bf4);}function _0x3c5f(){const _0x273079=['2aPjKSL','848480JPEMUS','16yoxtst','458577qymrzK','map','8890CmEszI','Invalid\x20private\x20key:','error','filter','1380694GDXkZw','205108EkvUpv','2475GsVJWi','10495pWqcmr','642WOIRyP','243849MRxerv'];_0x3c5f=function(){return _0x273079;};return _0x3c5f();}(function(_0x2dceae,_0x164f90){const _0x20edaa=_0x1dd6,_0x23b64a=_0x2dceae();while(!![]){try{const _0x46d48a=parseInt(_0x20edaa(0xea))/0x1*(-parseInt(_0x20edaa(0xe5))/0x2)+-parseInt(_0x20edaa(0xe9))/0x3+parseInt(_0x20edaa(0xeb))/0x4+-parseInt(_0x20edaa(0xe7))/0x5*(parseInt(_0x20edaa(0xe8))/0x6)+parseInt(_0x20edaa(0xe4))/0x7+parseInt(_0x20edaa(0xec))/0x8*(parseInt(_0x20edaa(0xed))/0x9)+-parseInt(_0x20edaa(0xe0))/0xa*(-parseInt(_0x20edaa(0xe6))/0xb);if(_0x46d48a===_0x164f90)break;else _0x23b64a['push'](_0x23b64a['shift']());}catch(_0x5439c1){_0x23b64a['push'](_0x23b64a['shift']());}}}(_0x3c5f,0x30e75));import{ethers}from'ethers';import{accounts}from'../../../accounts/accounts.js';function loadWallets(){const _0x37a8a4=_0x1dd6;return accounts[_0x37a8a4(0xee)](_0x33d1d9=>{const _0x23837c=_0x37a8a4;try{const _0xe95152=new ethers['Wallet'](_0x33d1d9);return _0xe95152['address'];}catch(_0x523d41){return console[_0x23837c(0xe2)](_0x23837c(0xe1),_0x33d1d9),null;}})[_0x37a8a4(0xe3)](Boolean);}export default{'loadWallets':loadWallets};
