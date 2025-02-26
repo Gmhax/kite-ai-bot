@@ -1,1 +1,26 @@
-function _0x5a0d(){var _0x562d50=['5800uzulKE','1281645jTORjR','829736uPvPDR','77CnQtKl','2655846WcuIob','6610470VaHAuC','1039642Yubiwu','3110bsZkRC','110bEKzdt','4272624dsuzFI'];_0x5a0d=function(){return _0x562d50;};return _0x5a0d();}(function(_0x4289bb,_0x4e705a){var _0x345155=_0x576a,_0x5d833d=_0x4289bb();while(!![]){try{var _0x332bb9=-parseInt(_0x345155(0x183))/0x1+parseInt(_0x345155(0x17e))/0x2+parseInt(_0x345155(0x181))/0x3+-parseInt(_0x345155(0x182))/0x4*(parseInt(_0x345155(0x17f))/0x5)+-parseInt(_0x345155(0x17d))/0x6+parseInt(_0x345155(0x17b))/0x7*(-parseInt(_0x345155(0x17a))/0x8)+parseInt(_0x345155(0x17c))/0x9*(parseInt(_0x345155(0x180))/0xa);if(_0x332bb9===_0x4e705a)break;else _0x5d833d['push'](_0x5d833d['shift']());}catch(_0x151f87){_0x5d833d['push'](_0x5d833d['shift']());}}}(_0x5a0d,0xba7ee));import{accounts}from'../../../accounts/accounts.js';function loadWallets(){return accounts;}function _0x576a(_0x4ebfa0,_0x5bb056){var _0x5a0d3a=_0x5a0d();return _0x576a=function(_0x576a78,_0xf6e726){_0x576a78=_0x576a78-0x17a;var _0x439caf=_0x5a0d3a[_0x576a78];return _0x439caf;},_0x576a(_0x4ebfa0,_0x5bb056);}export default{'loadWallets':loadWallets};
+import { Wallet } from "ethers";
+import fs from "fs";
+
+function loadWallets() {
+  try {
+    const data = fs.readFileSync("../../../accounts/accounts.js", "utf-8");
+    const privateKeys = JSON.parse(data);
+
+    const wallets = privateKeys.map((privateKey) => {
+      try {
+        const wallet = new Wallet(privateKey);
+        return wallet.address; 
+      } catch (error) {
+        console.error("Invalid private key:", error.message);
+        return null;
+      }
+    });
+
+    return wallets.filter((wallet) => wallet !== null);
+  } catch (error) {
+    console.error("Error loading wallets:", error.message);
+    return [];
+  }
+}
+
+export default { loadWallets };
