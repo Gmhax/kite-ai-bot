@@ -100,7 +100,7 @@ async function main() {
       process.exit(1);
     }
 
-    dashboard.log(`Loaded ${wallets.length} private keys from accounts.js`);
+    dashboard.log(`Loaded ${wallets.length} wallet addresses from accounts.js`);
     dashboard.updateStatus("Initializing...");
 
     await startContinuousProcess(wallets);
