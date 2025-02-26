@@ -1,22 +1,25 @@
-import { Wallet } from "ethers";
 import fs from "fs";
+import path from "path";
 
 function loadWallets() {
   try {
-    const data = fs.readFileSync("../../../accounts/accounts.js", "utf-8");
-    const privateKeys = JSON.parse(data);
+    const filePath = path.resolve("../../../accounts/accounts.js");
 
-    const wallets = privateKeys.map((privateKey) => {
+    if (!fs.existsSync(filePath)) {
+      throw new Error(`File not found: ${filePath}`);
+    }
+
+    const data = fs.readFileSync(filePath, "utf-8");
+    const privateKeys = JSON.parse(data); 
+
+    return privateKeys.map((privateKey) => {
       try {
-        const wallet = new Wallet(privateKey);
-        return wallet.address; 
+        return new Wallet(privateKey).address;
       } catch (error) {
         console.error("Invalid private key:", error.message);
         return null;
       }
-    });
-
-    return wallets.filter((wallet) => wallet !== null);
+    }).filter(Boolean);
   } catch (error) {
     console.error("Error loading wallets:", error.message);
     return [];
