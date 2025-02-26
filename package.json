@@ -24,6 +24,7 @@
   "license": "ISC",
   "type": "module",
   "dependencies": {
+    "ethers": "^6.7.0",
     "axios": "^1.7.9",
     "blessed": "^0.1.81",
     "blessed-contrib": "^4.11.0",
