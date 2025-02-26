@@ -58,7 +58,7 @@ npm run start
 - Statistics (total requests, success rate)
 - Progress indicator
 
-## DASHBOARD COMPONENTS
+### DASHBOARD COMPONENTS
 
 - **Banner**: Shows project information and links
 - **Agent Interactions**: Real-time log of questions and answers
@@ -66,7 +66,7 @@ npm run start
 - **Statistics**: Displays request counts and success rate
 - **Progress**: Visual indicator of cycle progress (resets every 10 cycles)
 
-## ERROR HANDLING
+### ERROR HANDLING
 
 The bot includes robust error handling for:
 
