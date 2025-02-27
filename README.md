@@ -22,7 +22,7 @@ A Node.js bot for interacting with the KiteAI testnet platform, featuring a clea
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/Rambeboy/kite-ai-bot.git && cd kite-ai-bot
+git clone https://github.com/Gmhax/kite-ai-bot.git && cd kite-ai-bot
 ```
 
 2. Install dependencies & setup accounts
